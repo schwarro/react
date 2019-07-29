@@ -48,3 +48,13 @@ let createRoom = function(name) {
 }
 //create jill's room
 const jillsRoom = new createRoom('jill');
+
+//this inside a class
+class createRoom {
+  constructr(name) {
+    this.table = `${name}s table`
+  }
+  cleanTable(soap) {
+    console.log(`cleaning ${this.table} using ${soap}`)
+  }
+}
