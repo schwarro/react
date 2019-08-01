@@ -81,8 +81,33 @@
 
 //Template Literals
 
-let name = 'Rob';
-let template =
-`<h1>Hello ${name}</h1>
-<p>This is a simple template</p>`;
-document.getElementById('template').innerHTML = template;
+// let name = 'Rob';
+// let template =
+// `<h1>Hello ${name}</h1>
+// <p>This is a simple template</p>`;
+// document.getElementById('template').innerHTML = template;
+
+//-------------------------------------------------------------------------
+
+//String & Number Methods
+//let string = "Hello";
+
+//startsWith()
+//endsWith()
+//includes()
+
+// console.log(string.startsWith('H'));
+//returns true
+
+// console.log(string.endsWith('l'));
+//returns false
+
+// console.log(string.includes('ll'));
+//returns true
+
+//console.log(Number.isFinite(3));
+//returns true
+//console.log(Number.isNaN(NaN));
+//returns true
+//console.log(Number.isInteger('string'));
+//returns false
