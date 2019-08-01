@@ -122,10 +122,70 @@
 //
 // greet();
 
-let args = [1,2,3];
-let arg = [4,5,6];
-function test() {
-  console.log(args + " + " + arg);
-}
+// let args = [1,2,3];
+// let arg = [4,5,6];
+// function test() {
+//   console.log(args + " + " + arg);
+// }
+//
+// test(...args,...arg);
 
-test(...args,...arg);
+//-------------------------------------------------
+
+// Set, Map, WeakSet, WeakMap
+
+//let arr = [1, 2, 3, 4, 5];
+//let set = new Set(arr);
+
+//set.add(6);
+//adds to array, can be any data
+//set.add({a: 1, b: 2});
+//adds object to array
+//set.delete(3);
+//deletes specific i
+// set.clear();
+//empties arr
+
+// console.log(set);
+// console.log(set.size);
+//checks size of arr
+
+// set.forEach(function(val){
+//   console.log(val);
+// });
+
+//let map = new Map([['a1', 'Hello'], ['b2', 'Goodbye']]);
+//map.set('c3', 'foo');
+//adds to Map
+//map.delete('a1');
+//deletes and goes by key
+//console.log(map);
+
+// let carWeakSet = new WeakSet();
+//
+// let car1 = {
+//   make: 'Honda',
+//   model: 'Civic',
+// };
+//
+// let car2 = {
+//   make: 'Mazda',
+//   model: 'Mazda3',
+// };
+//
+// carWeakSet.add(car1);
+// carWeakSet.add(car2);
+// carWeakSet.delete(car1);
+// console.log(carWeakSet);
+
+// let carWeakMap = new WeakMap();
+//
+// let key1 = {
+//   id: 1,
+//   make: 'Honda',
+//   model: 'Civic',
+// }
+//
+// carWeakMap.set(key1);
+// carWeakMap.delete(key1);
+// console.log(carWeakMap);
