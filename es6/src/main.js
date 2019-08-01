@@ -242,44 +242,69 @@
 //   console.log(res);
 // });
 
-function getData(method, url){
-  return new Promise(function(resolve, reject){
-    let xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.onload = function(){
-      if(this.status >= 200 && this.status < 300){
-        resolve(xhr.response);
-      } else {
-        reject({
-          status: this.status,
-          statusText: xhr.statusText
-        });
-      }
-    };
-    xhr.onerror = function(){
-      reject({
-        status: this.status,
-        statusText: xhr.statusText
-      });
-    };
-    xhr.send();
-  });
-}
+// function getData(method, url){
+//   return new Promise(function(resolve, reject){
+//     let xhr = new XMLHttpRequest();
+//     xhr.open(method, url);
+//     xhr.onload = function(){
+//       if(this.status >= 200 && this.status < 300){
+//         resolve(xhr.response);
+//       } else {
+//         reject({
+//           status: this.status,
+//           statusText: xhr.statusText
+//         });
+//       }
+//     };
+//     xhr.onerror = function(){
+//       reject({
+//         status: this.status,
+//         statusText: xhr.statusText
+//       });
+//     };
+//     xhr.send();
+//   });
+// }
+//
+// getData('GET', 'https://jsonplaceholder.typicode.com/todos').then(function(data){
+//   // console.log(data);
+//   let todos = JSON.parse(data);
+//   let output = '';
+//   for(let todo of todos) {
+//     output += `
+//     <li>
+//       <h3>${todo.title}</h3>
+//       <p>Completed: ${todo.completed}</p>
+//     </li>
+//     `;
+//   }
+//
+// document.getElementById('template').innerHTML = output;
+// }).catch(function(err){
+//   console.log(err);
+// });
 
-getData('GET', 'https://jsonplaceholder.typicode.com/todos').then(function(data){
-  // console.log(data);
-  let todos = JSON.parse(data);
-  let output = '';
-  for(let todo of todos) {
-    output += `
-    <li>
-      <h3>${todo.title}</h3>
-      <p>Completed: ${todo.completed}</p>
-    </li>
-    `;
-  }
+//------------------------------------------------------------------------
 
-  document.getElementById('template').innerHTML = output;
-}).catch(function(err){
-  console.log(err);
-});
+//Generators
+
+// function *g1(){
+//   console.log('Hello');
+//   yield 'Yield 1 Ran..';
+//   console.log('World');
+//   yield 'Yield 2 Ran..';
+//   return 'Returned';
+// }
+//
+// let g = g1();
+
+// console.log(g.next());
+// //returns yield 1
+// console.log(g.next());
+// //returns yield 2
+// console.log(g.next());
+// //changes done to true
+
+// for(let val of g){
+//   console.log(val);
+// }
