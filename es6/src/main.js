@@ -111,3 +111,21 @@
 //returns true
 //console.log(Number.isInteger('string'));
 //returns false
+
+//--------------------------------------------------
+
+//Default Params & Spread Operator
+
+// function greet(greeting = 'hello') {
+//   console.log(greeting)
+// }
+//
+// greet();
+
+let args = [1,2,3];
+let arg = [4,5,6];
+function test() {
+  console.log(args + " + " + arg);
+}
+
+test(...args,...arg);
