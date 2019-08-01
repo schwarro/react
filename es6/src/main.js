@@ -189,3 +189,37 @@
 // carWeakMap.set(key1);
 // carWeakMap.delete(key1);
 // console.log(carWeakMap);
+
+//---------------------------------------------------
+
+//Arrow functions
+
+// function Prefixer(prefix) {
+//   this.prefix = prefix;
+// }
+//
+// Prefixer.prototype.prefixArray = function(arr){
+//   // let that = this;
+//   return arr.map((x) => {
+//     console.log(this.prefix + x);
+//   });
+// }
+//
+// let pre = new Prefixer('Hello ');
+// pre.prefixArray(['Rob', 'Brad']);
+
+// let add = function(a,b) {
+//   let sum = a + b;
+//   console.log(sum);
+//   return false;
+// }
+//
+// add(2,2);
+
+let add = (a,b) => {
+  let sum = a + b;
+  console.log(sum);
+  return false;
+}
+
+add(2,2);
