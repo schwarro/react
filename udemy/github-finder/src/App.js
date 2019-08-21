@@ -14,9 +14,9 @@ class App extends Component {
   state = {
     users: [],
     user: {},
+    repos: [],
     loading: false,
-    alert: null,
-    repos: []
+    alert: null
   };
 
   // async componentDidMount() {
