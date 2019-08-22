@@ -8,14 +8,10 @@ import Alert from './components/layout/Alert';
 import About from './components/pages/About';
 // import logo from './logo.svg';
 import './App.css';
-import axios from 'axios';
+// import axios from 'axios';
 import GithubState from './context/github/GithubState';
 
 const App = () => {
-  // const [users, setUsers] = useState([]);
-  // const [user, setUser] = useState({});
-  const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState(null);
 
   // state = {
@@ -60,16 +56,16 @@ const App = () => {
   // }
 
   //Get Users Repos
-  const getUserRepos = async username => {
-    setLoading(true);
-
-    const res = await axios.get(
-      `https://api.github.com/users/${username}/repos?per_page=5&sort=created:asc&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
-    );
-
-    setRepos(res.data)
-    setLoading(false);
-  }
+  // const getUserRepos = async username => {
+  //   setLoading(true);
+  //
+  //   const res = await axios.get(
+  //     `https://api.github.com/users/${username}/repos?per_page=5&sort=created:asc&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
+  //   );
+  //
+  //   setRepos(res.data)
+  //   setLoading(false);
+  // }
 
   //Clear Users from State
   // const clearUsers = () => {
@@ -103,17 +99,7 @@ const App = () => {
               )}
               />
               <Route exact path='/about' component={About} />
-              <Route
-                exact
-                path='/user/:login'
-                render={props => (
-                  <User
-                    { ...props }
-                    getUserRepos={getUserRepos}
-                    repos={repos}
-                  />
-                )}
-              />
+              <Route exact path='/user/:login' component={User}/>
             </Switch>
           </div>
         </div>
