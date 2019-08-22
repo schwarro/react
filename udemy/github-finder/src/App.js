@@ -9,6 +9,7 @@ import About from './components/pages/About';
 // import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
+import GithubState from './context/github/GithubState';
 
 const App = () => {
   const [users, setUsers] = useState([]);
@@ -83,7 +84,8 @@ const App = () => {
   };
 
 
-    return (
+  return (
+    <GithubState>
       <Router>
         <div className='App'>
           <Navbar />
@@ -124,7 +126,8 @@ const App = () => {
           </div>
         </div>
       </Router>
-    );
-}
+    </GithubState>
+  );
+};
 
 export default App;
