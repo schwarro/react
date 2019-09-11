@@ -4,8 +4,8 @@ import Recipe from './Recipe'
 
 const App = () => {
 
-  const app_id = "2bb60424"
-  const app_key = "6baf6987331936261a6fd6690a8a1292"
+  const app_id = process.env.REACT_APP_API_ID
+  const app_key = process.env.REACT_APP_API_KEY
   const [recipes, setRecipes] = useState([])
   const [search, setSearch] = useState('')
   const [query, setQuery] = useState('chicken')
@@ -42,6 +42,7 @@ const App = () => {
           type="text"
           value={search}
           onChange={updateSearch}
+          placeholder="Search an ingredient..."
         />
         <button className="search-button" type="submit">
             Search
