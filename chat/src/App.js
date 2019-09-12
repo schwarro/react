@@ -1,12 +1,20 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import SendMessageForm from './components/SendMessageForm'
+import RoomList from './components/RoomList'
+import NewRoomForm from './components/NewRoomForm'
+import MessageList from './components/MessageList'
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
-  );
+class App extends React.Component {
+    render() {
+        return (
+            <div className="app">
+                <RoomList />
+                <MessageList />
+                <SendMessageForm />
+                <NewRoomForm />
+            </div>
+        );
+    }
 }
 
-export default App;
+export default App
