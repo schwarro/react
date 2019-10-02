@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import Stock from './stock.js';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <Stock></Stock>
     </div>
   );
 }
